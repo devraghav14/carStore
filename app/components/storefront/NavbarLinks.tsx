@@ -12,7 +12,7 @@ export const navbarLinks = [
     },
     {
         id: 1,
-        name: "All Cars",
+        name: "All",
         href: "/products/all"
     },
     {
@@ -32,12 +32,12 @@ export const navbarLinks = [
     },
     {
         id: 5,
-        name: "Sports Cars",
+        name: "Sports",
         href: "/products/sports"
     },
     {
         id: 6,
-        name: "Admin Dashboard",
+        name: "Admin",
         href: "/dashboard"
     },
 ];
