@@ -1,36 +1,140 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+🚀 Overview
 
-## Getting Started
+CarStore features a powerful Admin Dashboard that allows complete control over the platform, built using Next.js, Node.js, Prisma ORM, and PostgreSQL. Unlike traditional applications that rely on third-party mock APIs, I have implemented a fully custom backend, ensuring better performance, security, and scalability.
 
-First, run the development server:
+The Admin Dashboard is the core of this platform, offering functionalities such as product management, banner control, and advanced sales analytics with real-time data synchronization using Upstash. Additionally, UploadThing is integrated for seamless media handling.
 
-```bash
+🛠️ Tech Stack
+
+Technology Usage
+
+Next.js (App Router) : Frontend framework for SSR, ISR, and optimized rendering
+
+TypeScript : Type safety and better developer experience
+
+Tailwind CSS: Styling for a modern UI
+
+Prisma ORM: Database management using PostgreSQL
+
+PostgreSQL(NEON DB) : Relational database for efficient and scalable storage
+
+Stripe: Payment gateway for secure checkout
+
+Kinde Auth: Authentication & authorization management
+
+Chart.js & Recharts: Sales analytics visualization with graphs
+
+Upstash: Real-time caching and data synchronization
+
+UploadThing : File and media uploads
+
+Vercel: Deployment and serverless hosting
+
+🎯 Admin Dashboard Features
+
+🔹 Comprehensive Product Management
+
+Create, edit, and delete products directly from the admin panel.
+
+Bulk product updates to streamline workflow.
+
+Real-time inventory tracking.
+
+🔹 Banner Control
+
+Add, edit, and remove promotional banners dynamically.
+
+Control homepage aesthetics directly from the admin panel.
+
+🔹 Advanced Sales Analytics
+
+Graphical reports of sales trends, revenue breakdowns, and customer insights.
+
+Real-time statistics powered by Upstash.
+
+Export reports for business intelligence.
+
+🔹 Seamless File Management with UploadThing
+
+Upload and manage product images and banners easily.
+
+Secure and optimized media storage with UploadThing.
+
+🔹 Secure & Scalable Authentication
+
+Kinde Auth integration for role-based authentication.
+
+Admin-only access to the dashboard.
+
+🔹 Payment Gateway Integration
+
+Stripe-powered transactions with webhook verification.
+
+Supports multiple currencies and payment methods.
+
+🛍️ Storefront Flow
+
+Users can browse products seamlessly with dynamic filtering and search functionality.
+
+Product pages display detailed descriptions, high-quality images, and stock availability.
+
+Cart management allows users to add, update, and remove items before checkout.
+
+Authenticated checkout flow ensures that only verified users can place orders.
+
+Real-time order tracking using Upstash provides customers with live order updates.
+
+💳 Stripe Checkout Sessions
+
+Secure Payment Processing using Stripe Checkout Sessions.
+
+Users are redirected to Stripe for a seamless and secure payment experience.
+
+After successful payment, users are redirected back to the site with real-time order confirmation.
+
+Stripe webhooks ensure that order statuses are updated automatically in the database.
+
+🚀 Installation & Setup
+
+1️⃣ Clone the Repository
+git clone https://github.com/your-username/CarStore.git
+cd CarStore
+
+2️⃣ Install Dependencies
+npm install
+
+3️⃣ Configure Environment Variables
+
+Create a .env file and add your credentials:
+DATABASE_URL=your_postgres_database_url
+STRIPE_SECRET_KEY=your_stripe_secret_key
+KINDE_SITE_URL=https://yourapp.com
+KINDE_POST_LOGOUT_REDIRECT_URL=https://yourapp.com
+KINDE_POST_LOGIN_REDIRECT_URL=https://yourapp.com/api/auth/creation
+UPSTASH_REDIS_URL=your_upstash_redis_url
+UPLOADTHING_SECRET=your_uploadthing_secret_key
+
+4️⃣ Migrate Database & Seed Data
+npx prisma migrate dev --name init
+npx prisma db seed
+
+5️⃣ Start the Development Server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Access the app at: http://localhost:3000
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+📈 Admin Dashboard Preview
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+The Admin Dashboard empowers store owners with:
+✅ Product & Inventory Management
+✅ Banner & Promotions Control
+✅ Advanced Sales Analytics with Real-Time Sync
+✅ Secure File Uploads & Media Management
 
-## Learn More
+📦 Deployment
 
-To learn more about Next.js, take a look at the following resources:
+Deployed on Vercel for seamless scalability and performance.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+📩 Contributions & Feedback
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+If you have suggestions or want to contribute, feel free to submit a PR or open an issue!
