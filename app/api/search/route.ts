@@ -12,16 +12,16 @@ export async function GET(req: Request) {
     const results = await prisma.product.findMany({
         where: {
             name: {
-                contains: query, // Finds partial matches
-                mode: "insensitive", // Case-insensitive search
+                contains: query, 
+                mode: "insensitive",
             },
         },
         select: {
             id: true,
             name: true,
-            images: true, // Fetch images for better UI
+            images: true, 
         },
-        take: 5, // Limit to 5 results
+        take: 5, 
     });
 
     return NextResponse.json({ results });

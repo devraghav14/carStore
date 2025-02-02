@@ -252,11 +252,11 @@ export async function checkOut() {
             success_url:
                 process.env.NODE_ENV === "development"
                     ? "http://localhost:3000/payment/success"
-                    : "https://car-store-dev.yourproject.com/payment/success",
+                    : "https://car-store-pi.vercel.app/payment/success",
             cancel_url:
                 process.env.NODE_ENV === "development"
                     ? "http://localhost:3000/payment/cancel"
-                    : "https://car-store-dev.yourproject.com/payment/cancel",
+                    : "https://car-store-pi.vercel.app/payment/cancel",
             metadata: {
                 userId: user.id,
             },
