@@ -97,7 +97,7 @@ Stripe webhooks ensure that order statuses are updated automatically in the data
 🚀 Installation & Setup
 
 1️⃣ Clone the Repository
-git clone https://github.com/your-username/CarStore.git
+git clone https://github.com/your-username/carStore.git
 cd CarStore
 
 2️⃣ Install Dependencies
